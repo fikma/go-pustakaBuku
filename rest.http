@@ -1,0 +1,25 @@
+@baseAddr = http://localhost:8080
+
+###
+GET {{baseAddr}}/buku/ HTTP/1.1
+
+###
+POST {{baseAddr}}/buku/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "nama": "Juna di Alam",
+    "penulis": "Riga Bigstar",
+    "publikasi": "2021times"
+}
+###
+PUT {{baseAddr}}/buku/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nama": "update",
+    "penulis": "update",
+    "publikasi": "update"
+}
+###
+DELETE {{baseAddr}}/buku/3 HTTP/1.1
